@@ -210,7 +210,7 @@ end
 
 function Pointshop2.CalculateServerHash( )
 	local ip, port = Pointshop2.GetServerIpAndPort( )
-	return util.CRC( ip .. port )
+	return util.CRC( ip .. ( port or 27015 ) )
 end
 
 local serverId
